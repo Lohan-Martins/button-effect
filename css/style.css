@@ -1,0 +1,43 @@
+body {
+    background: black;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+}
+
+
+.button-box {
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: none;
+    background: transparent;
+    color: white;
+    padding: 20px 30px;
+    border: 1px solid white;
+    letter-spacing: 1px;
+    transition: color 1s;
+    position: absolute;
+    overflow: hidden;
+    
+}
+
+.button-box:hover {
+    color: rgb(0, 0, 0);
+}
+
+.button-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    transform: skew(35deg);
+    z-index: -1;
+    transition: width 1s;
+}
+
+.button-box:hover::before{
+    width: 150%;
+}
